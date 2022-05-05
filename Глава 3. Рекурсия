@@ -2,6 +2,7 @@
 
 # Создаем функцию "countdown", которая принимает один входной параметр:
 # число "i", обозначающее число секунд для отсчета.
+
 def countdown(i):
     # Создаем базовый случай.
     # Базовый случай в рекурсивной функции - это часть функции, в которой описывается
@@ -30,7 +31,6 @@ def factorial(num):
         return num * factorial(num-1)
 # x = factorial(int(input('Enter number...\n')))
 # print(x)
-
 #При помощи цикла while, снимается лимит рекурсии
 def some2(num):
     result = 1
@@ -39,6 +39,14 @@ def some2(num):
         result*=count        
         count+=1
     return result
+
+#Возведение в степень
+def degree(num, deg):
+    if deg == 0:
+        return 1
+    else:
+        return num * degree(num, deg-1)
+#print(degree(5,5))
 
 # Числа Фибоначчи
 def fib(n):
