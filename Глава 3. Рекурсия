@@ -1,0 +1,25 @@
+#Примеры использования рекурсии
+# Факториал числа
+def fact(x):
+    if x==1:
+        return 1
+    return fact(x-1)*x
+print(fact(4))
+
+# Числа Фибоначчи
+def fib(n):
+    if n == 1:
+        return 0
+    if n == 2:
+        return 1
+    return fib(n-1) + fib(n-2)
+print(fib(7))
+
+# Палиндром
+def palindrome(s):
+    if len(s) <= 1:
+        return True
+    if s[0] != s[-1]:
+        return False
+    return palindrome(s[1:-1])
+print(palindrome('шалаш'))
